@@ -78,3 +78,7 @@ Aplica dano a um tile. Se a saúde do tile for reduzida a 0, ele é removido.
 GetTileInventory, AddTileInventory:
 
 Gerencia inventários associados a tiles, como baús.
+
+## Inventory ##
+
+
