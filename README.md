@@ -8,7 +8,7 @@ O jogo escolhido foi TheGreen que é um jogo com mecanicas semelhantes a Terrari
 
 ## WorldGen ##
 Na classe WorldGen é onde o mundo é gerado, guardado e onde carregado caso esta não seja a primeira vez que jogue. Tambem é a classe principal da pasta WorldGeneration de onde varias outras classes relacionadas com o mundo interagem.  
-Para a geração do mundo são utilizadas as seguintes etapas  
+#Para a geração do mundo são utilizadas as seguintes etapas  
 Etapas de Geração  
 1.Inicialização:
 
@@ -33,7 +33,7 @@ Atualiza o estado de cada tile (SetTileState) e parede (UpdateWallState) para ga
 
 Espalha grama sobre a superfície.  
 Planta árvores em posições aleatórias, respeitando distâncias mínimas entre elas.  
-#Métodos Auxiliares#  
+#Métodos Auxiliares  
 Generate1DNoise:  
 
 Gera um vetor de ruído 1D para determinar a elevação do terreno.  
@@ -48,7 +48,7 @@ Suaviza os valores de ruído calculando a média de um valor e seus vizinhos.
 InitializeGradients:  
 
 Inicializa gradientes aleatórios para uso no cálculo de ruído Perlin.  
-#Atualizações no Mundo#  
+#Atualizações no Mundo  
 InitializeGameUpdates:  
 
 Configura atualizadores do mundo, como:  
@@ -57,7 +57,7 @@ OverlayTileUpdater: Gerencia tiles de sobreposição, como grama.
 Update:  
 
 Executa atualizações periódicas em líquidos, grama e tiles danificados.  
-#Manipulação de Tiles#  
+#Manipulação de Tiles  
 SetTile, RemoveTile:  
 
 Define ou remove tiles no mundo, atualizando estados e propriedades.  
@@ -67,11 +67,11 @@ Calcula e aplica estados para tiles e paredes com base nos vizinhos.
 GenerateTree:  
 
 Adiciona árvores ao mundo, gerando tronco e topo.  
-#Guardar e Carregamento#  
+#Guardar e Carregamento  
 SaveWorld, LoadWorld:  
 Salva ou carrega o estado do mundo em arquivos binários.  
 Inclui informações sobre os tiles, paredes, líquidos, e inventários.  
-#Interatividade#  
+#Interatividade  
 DamageTile:  
 
 Aplica dano a um tile. Se a saúde do tile for reduzida a 0, ele é removido.  
