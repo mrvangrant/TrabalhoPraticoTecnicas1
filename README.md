@@ -1,6 +1,6 @@
 ### TrabalhoPraticoTecnicas1 ###
 O jogo escolhido foi TheGreen que é um jogo com mecanicas semelhantes a Terraria, sendo estas a geração de um mundo 2D na qual o jogador pode interagir cortando arvores, minerando e construindo estruturas.
-#Classes a falar#\
+#Classes a falar#
 - WorldGeneration
 - Lighting
 - Entities
@@ -19,21 +19,21 @@ Configura o gerador de números aleatórios com a semente fornecida (ou gera uma
 Usa o método Generate1DNoise para criar um ruído que determina as elevações do terreno.
 Suaviza o ruído com Smooth para reduzir transições abruptas.
 Coloca tiles de pedra e calcula a altura da superfície.
-Adição de Camadas:
+3.Adição de Camadas:
 
 Adiciona camadas de terra e grama abaixo da superfície.
-3.Geração de Cavernas:
+4.Geração de Cavernas:
 
 Usa ruído Perlin bidimensional (GeneratePerlinNoiseWithOctaves) para determinar onde cavernas serão formadas.
 Remove tiles com base nos valores do ruído.
-4.Cálculo de Estados:
+5.Cálculo de Estados:
 
 Atualiza o estado de cada tile (SetTileState) e parede (UpdateWallState) para garantir consistência.
-5.Espalhamento de Grama e Plantação de Árvores:
+6.Espalhamento de Grama e Plantação de Árvores:
 
 Espalha grama sobre a superfície.
 Planta árvores em posições aleatórias, respeitando distâncias mínimas entre elas.
-3. Métodos Auxiliares
+#Métodos Auxiliares#
 Generate1DNoise:
 
 Gera um vetor de ruído 1D para determinar a elevação do terreno.
@@ -48,7 +48,7 @@ Suaviza os valores de ruído calculando a média de um valor e seus vizinhos.
 InitializeGradients:
 
 Inicializa gradientes aleatórios para uso no cálculo de ruído Perlin.
-4. Atualizações no Mundo
+#Atualizações no Mundo#
 InitializeGameUpdates:
 
 Configura atualizadores do mundo, como:
@@ -57,7 +57,7 @@ OverlayTileUpdater: Gerencia tiles de sobreposição, como grama.
 Update:
 
 Executa atualizações periódicas em líquidos, grama e tiles danificados.
-5. Manipulação de Tiles
+#Manipulação de Tiles#
 SetTile, RemoveTile:
 
 Define ou remove tiles no mundo, atualizando estados e propriedades.
