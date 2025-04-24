@@ -81,4 +81,56 @@ Gerencia inventários associados a tiles, como baús.
 
 ## Inventory ##
 
+## Light Engine ##
+O LightEngine.cs implementa o sistema de iluminação para o jogo. Este componente é responsável por calcular e aplicar os efeitos de luz no mundo do jogo, considerando luzes estáticas e dinâmicas, absorção de luz por diferentes materiais, e propagação de luz para simular iluminação realista.
 
+Funcionalidades:
+Mapa de Luz (_lightMap): Estrutura que armazena as propriedades de luz (intensidade e máscara de absorção) para cada ponto do mundo do jogo.
+
+Luzes Dinâmicas(_dynamicLights): Permite adicionar luzes que variam frame a frame, como luzes de tochas ou explosões.
+
+Propagação de Luz: Implementação de propagação de luz em múltiplas direções para simular efeitos de iluminação difusa.
+
+Absorção de Luz: Define como diferentes tipos de materiais (paredes, blocos, líquidos) absorvem ou transmitem a luz.
+
+Suporte a Áreas Visíveis: Cálculo otimizado dentro de uma área delimitada pela visão do jogador, considerando um buffer adicional para o alcance da luz.
+
+Métodos:
+CalculateLightMap: Método central que executa três passos principais:
+
+	Limpa o mapa de luz aplicando absorção e valores padrão.
+	Aplica as luzes dinâmicas adicionadas pela lógica do jogo.
+	Realiza a propagação da luz em todo o mapa.
+
+ClearLightMap: Inicializa o mapa de luz, determinando valores de luz e absorção com base em elementos do mundo como blocos sólidos, paredes, líquidos e blocos emissores de luz.
+
+ApplyDynamicLights: Processa e aplica as luzes dinâmicas adicionadas durante o jogo.
+
+SpreadLight: Propaga a luz no mapa, suavizando os efeitos de iluminação para criar uma distribuição realista.
+
+SetDrawBox: Define os limites da área do mapa onde a luz será calculada, considerando o alcance da luz.
+
+GetLight: Retorna a cor da luz em um ponto específico do mapa.
+
+AddLight: Permite adicionar uma luz dinâmica em uma posição específica.
+
+Estrutura de Dados
+Absorção de Materiais:
+
+Paredes (_wallAbsorption): Absorvem 90% da luz.
+Blocos (_tileAbsorption): Absorvem 70% da luz.
+Líquidos (_liquidLightAbsorption): Absorvem luz com valores específicos para cada canal de cor (R, G, B).
+Fila de Luzes Dinâmicas (_dynamicLights): Estrutura que armazena luzes dinâmicas para serem processadas.
+
+Uso
+Configuração Inicial:
+
+Instanciar a classe LightEngine, passando o dispositivo gráfico do XNA como argumento.
+Configurar os limites da área visível com SetDrawBox.
+Atualização por Frame:
+
+Adicionar luzes dinâmicas com AddLight.
+Calcular o mapa de luz para o frame atual usando CalculateLightMap.
+Consulta de Luz:
+
+Utilizar GetLight para obter a cor da luz em posições específicas do mapa.
