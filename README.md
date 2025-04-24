@@ -8,8 +8,8 @@ O jogo escolhido foi TheGreen que é um jogo com mecanicas semelhantes a Terrari
 
 ## WorldGen ##
 Na classe WorldGen é onde o mundo é gerado, guardado e onde carregado caso esta não seja a primeira vez que jogue. Tambem é a classe principal da pasta WorldGeneration de onde varias outras classes relacionadas com o mundo interagem.  
-Para a geração do mundo são utilizadas as seguintes etapas
-Etapas de Geração
+Para a geração do mundo são utilizadas as seguintes etapas  
+Etapas de Geração  
 1.Inicialização:
 
 Define o tamanho do mundo (WorldSize) e inicializa o array de tiles.
