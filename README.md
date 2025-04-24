@@ -67,11 +67,11 @@ Calcula e aplica estados para tiles e paredes com base nos vizinhos.
 GenerateTree:
 
 Adiciona árvores ao mundo, gerando tronco e topo.
-6. Salvamento e Carregamento
+#Guardar e Carregamento#
 SaveWorld, LoadWorld:
 Salva ou carrega o estado do mundo em arquivos binários.
 Inclui informações sobre os tiles, paredes, líquidos, e inventários.
-7. Interatividade
+#Interatividade#
 DamageTile:
 
 Aplica dano a um tile. Se a saúde do tile for reduzida a 0, ele é removido.
