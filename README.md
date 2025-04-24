@@ -7,8 +7,13 @@ O codigo esta organizado em essencialmente 4 pastas.
 # Framework  
 
 # Models  
+
 # Scenes  
+
 # Sprites  
+Esta pasta só tem duas classes.  
+Block que representa uma peça de tetris e utiliza uma serie de funções para verificar a sua rotação, movimento e colisões.
+A classe BlockGenerator é responsável por gerar blocos no contexto do jogo Tetris.
 
 
 
