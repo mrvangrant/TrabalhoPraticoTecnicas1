@@ -25,7 +25,7 @@ Esta classe possui uma função "BallSpawner" que utiliza a func "Random" para a
 Tem uma função "LoadContent"  que carrega o sprite da Bola, guardando-o em "_balltexture"
 usando a função ContentManager para carregar a textura "ball" e o parâmetro content para gerir o conteúdo usado para carregar o recurso
 
-O método Draw Usa o parâmetro "spritebatch" para renderizar a bola na "BallPosition" que sera centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomara a cor normal do sprite visto que "Color.White".
+O método Draw Usa o parâmetro "spritebatch" para renderizar a bola na "BallPosition" que sera centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomara a cor normal do sprite visto que "Color.White" que usa a cor normal do sprite.
 
 por fim tem a função SpawnNew que usa o "_rng" para artibuir um valor a "Ballposition" que esta limitado pela função "_gridSize"
  
