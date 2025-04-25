@@ -17,13 +17,19 @@ Por fim existe o método GetMovement, responsável por retornar um vetor de movi
 
 # Ball Spawner #
 
-Esta classe possui uma função "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola sera renderizada, este valor vaim ser delimitado pelo tamanho do campo 
-"_gridsize" atribuindo-lhe os valores de "gridSize" que sera inicializado na classe "Game1"
+BallPosition: Representa a posição atual da bola na grid, utilizando um vetor 2D (Vector2).
+_gridSize: Define o tamanho da grade (linhas, colunas).
+_rng: Objeto da classe Random, usado para gerar posições aleatórias.
+_ballTexture: Textura da bola, carregada a partir dos recursos do jogo.
+
+Esta classe possui um contrutor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola sera renderizada, este valor vaim ser delimitado pelo tamanho do campo 
+"_gridsize" atribuindo-lhe os valores de "gridSize" que sera inicializado na classe "Game1", e chama a função "SpawnNew" para posicionar a bola aleatoriamente.
 
 Tem uma função "LoadContent"  que carrega o sprite da Bola, guardando-o em "_balltexture"
 usando a função ContentManager para carregar a textura "ball" e o parâmetro content para gerir o conteúdo usado para carregar o recurso
 
-O método Draw Usa o parâmetro "spritebatch" para renderizar a bola na "BallPosition" que sera centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomara a cor normal do sprite visto que "Color.White" que usa a cor normal do sprite.
+O método Draw Usa o parâmetro "spritebatch" para renderizar a bola na posição atual "BallPosition" que sera centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomara a cor normal do sprite visto que "Color.White".
 
-por fim tem a função SpawnNew que usa o "_rng" para artibuir um valor a "Ballposition" que esta limitado pela função "_gridSize"
+Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleatório "Ballposition" que esta limitado pela função "_gridSize"
+
  
