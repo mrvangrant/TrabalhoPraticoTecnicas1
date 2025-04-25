@@ -25,14 +25,13 @@ _rng: Objeto da classe Random, usado para gerar posições aleatórias.
 
 _ballTexture: Textura da bola, carregada a partir dos recursos do jogo.
 
-Esta classe possui um contrutor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola sera renderizada, este valor vaim ser delimitado pelo tamanho do campo 
-"_gridsize" atribuindo-lhe os valores de "gridSize" que sera inicializado na classe "Game1", e chama a função "SpawnNew" para posicionar a bola aleatoriamente.
+Esta classe possui um contrutor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola será renderizada, este valor vai ser delimitado pelo tamanho do campo 
+"_gridsize" atribuindo-lhe os valores de "gridSize" que serão inicializados na classe "Game1", e chama a função "SpawnNew" para posicionar a bola aleatoriamente.
 
-Tem uma função "LoadContent"  que carrega o sprite da Bola, guardando-o em "_balltexture"
-usando a função ContentManager para carregar a textura "ball" e o parâmetro content para gerir o conteúdo usado para carregar o recurso
+Tem uma função "LoadContent" que carrega o sprite da Bola, guardando-o em "_balltexture", através da função ContentManager para carregar a textura "ball" e o parâmetro content para gerir o conteúdo usado para carregar a textura.
 
-O método Draw Usa o parâmetro "spritebatch" para renderizar a bola na posição atual "BallPosition" que sera centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomara a cor normal do sprite visto que "Color.White".
+O método Draw usa o parâmetro "spritebatch" para renderizar a bola na posição atual, "BallPosition", que será centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomará a cor normal do sprite visto que "Color.White" usa a cor original do sprite, sem alterações.
 
-Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleatório "Ballposition" que esta limitado pela função "_gridSize"
+Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleatório para "Ballposition" que está limitado pelo "_gridSize"
 
  
