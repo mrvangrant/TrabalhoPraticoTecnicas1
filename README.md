@@ -32,6 +32,6 @@ Tem uma função "LoadContent" que carrega o sprite da Bola, guardando-o em "_ba
 
 O método Draw usa o parâmetro "spritebatch" para renderizar a bola na posição atual, "BallPosition", que será centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomará a cor normal do sprite visto que "Color.White" usa a cor original do sprite, sem alterações.
 
-Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleatório para "Ballposition" que está limitado pelo "_gridSize"
+Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleatório para "Ballposition" que está limitado pelo "_gridSize".
 
  
