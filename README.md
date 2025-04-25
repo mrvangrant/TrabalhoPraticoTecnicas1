@@ -17,22 +17,15 @@ Por fim existe o método GetMovement, responsável por retornar um vetor de movi
 
 # Ball Spawner #
 
-public Ballspawner:
+Ball Spawner
 
--Usa a func Random para escolher um lugar aleatorio onde a bola sera renderizada
--gridsize serve para definir os limites em X e Y onde a bola pode aparecer.
--por fim chama public void spawnNew()
+Esta classe possui uma função "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola sera renderizada, este valor vaim ser delimitado pelo tamanho do campo 
+"_gridsize" atribuindo-lhe os valores de "gridSize" que sera inicializado na classe "Game1"
 
-public LoadContent:
+Tem uma função "LoadContent"  que carrega o sprite da Bola, guardando-o em "_balltexture"
+usando a função ContentManager para carregar a textura "ball" e o parâmetro content para gerir o conteúdo usado para carregar o recurso
 
--Carrega o sprite da bola, guardando-a na "private _ballTexture" usando o ContentManager para carregar a textura "ball"
--usa o parametro content para gerir o conteudo usado para carreagar o recurso
+O método Draw Usa o parâmetro "spritebatch" para renderizar a bola na "BallPosition" que sera centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomara a cor normal do sprite visto que "Color.White".
 
-public Draw:
-
--Usa o parametro sprite batch para renderizar a textura na posicao BallPosition
--A posicao e centralizada com a ajuda de um deslocamento "new Vector2(20, 20) + new Vector2(2f, 2f)"
-
-Public SpawnNew:
-
--Usa o _rng para gerar uma posicao random de X e Y e associa-la a "BallPosition" que estao limitadas por "_gridSize"
+por fim tem a função SpawnNew que usa o "_rng" para artibuir um valor a "Ballposition" que esta limitado pela função "_gridSize"
+ 
