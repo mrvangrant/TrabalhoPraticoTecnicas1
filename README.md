@@ -17,8 +17,6 @@ Por fim existe o método GetMovement, responsável por retornar um vetor de movi
 
 # Ball Spawner #
 
-Ball Spawner
-
 Esta classe possui uma função "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola sera renderizada, este valor vaim ser delimitado pelo tamanho do campo 
 "_gridsize" atribuindo-lhe os valores de "gridSize" que sera inicializado na classe "Game1"
 
