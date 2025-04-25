@@ -18,8 +18,11 @@ Por fim existe o método GetMovement, responsável por retornar um vetor de movi
 # Ball Spawner #
 
 BallPosition: Representa a posição atual da bola na grid, utilizando um vetor 2D (Vector2).
+
 _gridSize: Define o tamanho da grade (linhas, colunas).
+
 _rng: Objeto da classe Random, usado para gerar posições aleatórias.
+
 _ballTexture: Textura da bola, carregada a partir dos recursos do jogo.
 
 Esta classe possui um contrutor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola sera renderizada, este valor vaim ser delimitado pelo tamanho do campo 
