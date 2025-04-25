@@ -14,3 +14,25 @@ Possui o método Update, que tem a função de armazenar qual foi a última tecl
 Existe o método Draw, responsável por desenhar a cabeça da cobra, com a rotação certa, realizando o mesmo processo para o corpo e a cauda da cobra.
 
 Por fim existe o método GetMovement, responsável por retornar um vetor de movimento com base na direção fornecida, ou seja, 0: Movimento para cima (0, -1) ; 1: Movimento para a direita (1, 0) ; 2: Movimento para baixo (0, 1) ; 3: Movimento para a esquerda (-1, 0).
+
+# Ball Spawner #
+
+public Ballspawner:
+
+-Usa a func Random para escolher um lugar aleatorio onde a bola sera renderizada
+-gridsize serve para definir os limites em X e Y onde a bola pode aparecer.
+-por fim chama public void spawnNew()
+
+public LoadContent:
+
+-Carrega o sprite da bola, guardando-a na "private _ballTexture" usando o ContentManager para carregar a textura "ball"
+-usa o parametro content para gerir o conteudo usado para carreagar o recurso
+
+public Draw:
+
+-Usa o parametro sprite batch para renderizar a textura na posicao BallPosition
+-A posicao e centralizada com a ajuda de um deslocamento "new Vector2(20, 20) + new Vector2(2f, 2f)"
+
+Public SpawnNew:
+
+-Usa o _rng para gerar uma posicao random de X e Y e associa-la a "BallPosition" que estao limitadas por "_gridSize"
