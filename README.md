@@ -19,7 +19,7 @@ Por fim existe o método GetMovement, responsável por retornar um vetor de movi
 
 BallPosition: Representa a posição atual da bola na grid, utilizando um vetor 2D (Vector2).
 
-_gridSize: Define o tamanho da grade (linhas, colunas).
+_gridSize: Define o tamanho da grid (linhas, colunas).
 
 _rng: Objeto da classe Random, usado para gerar posições aleatórias.
 
