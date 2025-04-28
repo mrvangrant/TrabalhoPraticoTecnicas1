@@ -2,8 +2,47 @@
 O jogo escolhido foi o jogo snake feito em monogame.  
 O repositorio do jogo original encontra-se [aqui](https://github.com/jasmine-blush/monogame_snake/tree/main)  
 
-O jogo funciona maioritariamente com duas classes sendo estas Snake e Ball Spawner.
+#Content#
 
+Neste jogo é necessário como contéudo uma imagem do tipo .png para a cabeça da cobra, para o corpo da cobra e para a cauda, também é utilizada uma imagem para a grade ("Grid") onde o jogo acontece e uma imagem para a bola. Finalemnte, também é ncessario o o font da letra que é utilizado para o game over.
+
+#Game Over#
+O jogo termina qaundo a cabeça da cobra bate no corpo dela ou na fronteira da grid, caso isso aconteça apararece escrito on ecrâ "Game Over" e o jogo termina.
+
+```
+ //Generate Game Over screen as a texture
+            _font = Content.Load<SpriteFont>("arial");
+            Vector2 gameOverSize = _font.MeasureString("Game Over!");
+            _gameOverTexture = new RenderTarget2D(
+                _graphics.GraphicsDevice,
+                (int)Math.Ceiling(gameOverSize.X),
+                (int)Math.Ceiling(gameOverSize.Y)
+            );
+
+            GraphicsDevice.SetRenderTarget(_gameOverTexture);
+            GraphicsDevice.Clear(Color.Transparent);
+            _spriteBatch.Begin();
+            _spriteBatch.DrawString(_font, "Game Over!", Vector2.Zero, Color.Red);
+            _spriteBatch.End();
+            GraphicsDevice.SetRenderTarget(null);
+            //-----
+O jogo funciona maioritariamente com duas classes sendo estas Snake e Ball Spawner.
+```
+O código abaixo é onde o na classe snake ele verifica e chama o Game1 para o game over acontecer.
+```
+        if (i == 0)
+                    {
+                        if (
+                            part.Position.X < 0
+                            || part.Position.Y < 0
+                            || part.Position.X >= _gridSize.Item1
+                            || part.Position.Y >= _gridSize.Item2
+                        )
+                        {
+                            Game1.GameOver = true;
+                            break;
+                        }
+```
 # Snake #
 A classe Snake possui uma estrutura, BodyPart, que é responsável por inicializar uma nova parte do corpo da cobra numa posição (x,y) e uma direção inicial, por exemplo 0-cima ; 1-direita ; 2-baixo ; 3-esquerda. 
 
