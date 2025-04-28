@@ -223,14 +223,50 @@ _gridSize: Define o tamanho da grid (linhas, colunas).
 _rng: Objeto da classe Random, usado para gerar posições aleatórias.
 
 _ballTexture: Textura da bola, carregada a partir dos recursos do jogo.
+```
+ internal class BallSpawner
+    {
+        public Vector2 BallPosition;
+        private (int, int) _gridSize;
+        private Random _rng;
+        private Texture2D _ballTexture;
+```
 
 Esta classe possui um contrutor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola será renderizada, este valor vai ser delimitado pelo tamanho do campo 
 "_gridsize" atribuindo-lhe os valores de "gridSize" que serão inicializados na classe "Game1", e chama a função "SpawnNew" para posicionar a bola aleatoriamente.
-
+```
+public BallSpawner((int, int) gridSize)
+        {
+            _rng = new Random();
+            _gridSize = gridSize;
+            SpawnNew();
+        }
+```
 Tem uma função "LoadContent" que carrega o sprite da Bola, guardando-o em "_balltexture", através da função ContentManager para carregar a textura "ball" e o parâmetro content para gerir o conteúdo usado para carregar a textura.
-
+```
+ public void LoadContent(ContentManager content)
+        {
+            _ballTexture = content.Load<Texture2D>("ball");
+        }
+```
 O método Draw usa o parâmetro "spritebatch" para renderizar a bola na posição atual, "BallPosition", que será centralizada na grid com a ajuda de um deslocamento: "new Vector2(20, 20) + new Vector2(2f, 2f)" e tomará a cor normal do sprite visto que "Color.White" usa a cor original do sprite, sem alterações.
-
+```
+ public void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(
+                _ballTexture,
+                BallPosition * new Vector2(20, 20) + new Vector2(2f, 2f),
+                Color.White
+            );
+        }
+```
 Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleatório para "Ballposition" que está limitado pelo "_gridSize".
-
- 
+```
+ public void SpawnNew()
+        {
+            BallPosition = new Vector2(
+                _rng.NextInt64(_gridSize.Item1),
+                _rng.NextInt64(_gridSize.Item2)
+            );
+        }
+ ```
