@@ -4,7 +4,7 @@ O repositorio do jogo original encontra-se [aqui](https://github.com/jasmine-blu
 
 # Content #
 
-Neste jogo é necessário como contéudo uma imagem do tipo .png para a cabeça da cobra, para o corpo da cobra e para a cauda, também é utilizada uma imagem para a grade ("Grid") onde o jogo acontece e uma imagem para a bola. Finalemnte, também é ncessario o o font da letra que é utilizado para o game over.
+Neste jogo é necessário como contéudo uma imagem do tipo .png para a cabeça da cobra, para o corpo da cobra e para a cauda, também é utilizada uma imagem para a grade ("Grid") onde o jogo acontece e uma imagem para a bola. Finalmente, também é ncessario o o font da letra que é utilizado para o game over.
 
 # Game Over #  
 O jogo termina quando a cabeça da cobra bate no corpo dela ou na fronteira da grid, caso isso aconteça apararece escrito on ecrâ "Game Over" e o jogo termina.
