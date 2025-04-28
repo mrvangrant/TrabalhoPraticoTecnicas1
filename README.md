@@ -270,3 +270,11 @@ Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleat�
             );
         }
  ```
+
+
+# Críticas #
+
+- É preciso fechar o programa e voltar a abrir para jogar de novo.
+- As paredes acabam o Jogo em vez de servirem como "Portal" para a parede oposta.
+- O som está muito alto e não há forma de alterar.
+- A bola pode ser renderizada dentro da cobra
