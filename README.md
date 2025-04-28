@@ -7,6 +7,12 @@ O jogo funciona maioritariamente com duas classes sendo estas Snake e Ball Spawn
 # Snake #
 A classe Snake possui uma estrutura, BodyPart, que é responsável por inicializar uma nova parte do corpo da cobra numa posição (x,y) e uma direção inicial, por exemplo 0-cima ; 1-direita ; 2-baixo ; 3-esquerda. 
 
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
 Possui um construtor que define o tamanho do grid, inicializa a direção inicial da cobra para a direita, ou seja 1. Cria o corpo da cobra com 3 segmentos e define a velocidade inicial da cobra e o contador de movimento.
 
 Tem o método LoadContent, responsável por carregar as texturas da cobra, a cabeça da cobra, o corpo da cobra e a cauda da cobra.
