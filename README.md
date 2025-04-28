@@ -2,6 +2,8 @@
 O jogo escolhido foi o jogo snake feito em monogame.  
 O repositorio do jogo original encontra-se [aqui](https://github.com/jasmine-blush/monogame_snake/tree/main)  
 
+O jogo funciona maioritariamente com duas classes sendo estas Snake e Ball Spawner.
+
 # Snake #
 A classe Snake possui uma estrutura, BodyPart, que é responsável por inicializar uma nova parte do corpo da cobra numa posição (x,y) e uma direção inicial, por exemplo 0-cima ; 1-direita ; 2-baixo ; 3-esquerda. 
 
