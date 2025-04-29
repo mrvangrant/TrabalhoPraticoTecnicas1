@@ -316,6 +316,12 @@ Por fim tem a função SpawnNew que usa o "_rng" para gerar um novo valor aleat�
 Apesar de ser baseado num jogo muito simples que nós todos já jogámos, ainda tem algumas falhas.
 
 - É preciso fechar o programa e voltar a abrir para jogar de novo.
+
+Uma solução seria, no fim do jogo pedir imput do jogador, por exemplo uma tecla "R" para reiniciar, se essa condição se verifica, o jogo inicializa outra vez (Game.Run).
+  
 - As paredes acabam o Jogo em vez de servirem como "Portal" para a parede oposta.
+
+Uma solução seria, usar a verificação que ja está no programa mas modifica-la para quando o player cruzar a borda por exemplo "y = 0" mudar a posição "y" do player para 
+  
 - O som está muito alto e não há forma de alterar.
 - A bola pode ser renderizada dentro da cobra
