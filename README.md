@@ -321,7 +321,7 @@ Uma solução seria, no fim do jogo pedir imput do jogador, por exemplo uma tecl
   
 - As paredes acabam o Jogo em vez de servirem como "Portal" para a parede oposta.
 
-Uma solução seria, usar a verificação que ja está no programa mas modifica-la para quando o player cruzar a borda por exemplo "y = 0" mudar a posição "y" do player para 
+Uma solução seria, usar a verificação que ja está no programa mas modifica-la para quando o player cruzar a borda por exemplo "y = 0" mudar a posição "y" do player para "y = _gridSize.ItemY"
   
 - O som está muito alto e não há forma de alterar.
 - A bola pode ser renderizada dentro da cobra
