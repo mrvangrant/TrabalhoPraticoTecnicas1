@@ -271,7 +271,7 @@ _ballTexture: Textura da bola, carregada a partir dos recursos do jogo.
         private Texture2D _ballTexture;
 ```
 
-Esta classe possui um contrutor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola será renderizada, este valor vai ser delimitado pelo tamanho do campo 
+Esta classe possui um construtor "BallSpawner" que utiliza a func "Random" para atribuir a _rng um valor aleatório onde a bola será renderizada, este valor vai ser delimitado pelo tamanho do campo 
 "_gridsize" atribuindo-lhe os valores de "gridSize" que serão inicializados na classe "Game1", e chama a função "SpawnNew" para posicionar a bola aleatoriamente.
 ```
 public BallSpawner((int, int) gridSize)
