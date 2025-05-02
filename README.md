@@ -30,7 +30,12 @@ O jogo funciona maioritariamente com duas classes sendo estas Snake e Ball Spawn
 ```
 O código abaixo é onde o na classe snake ele verifica e chama o Game1 para o game over acontecer.
 ```
-        if (i == 0)
+        int currDirection = head.Direction;
+                for (int i = 0; i < _body.Count; i++)
+                {
+                    BodyPart part = _body[i];
+                    part.Position += GetMovement(part.Direction);
+                    if (i == 0)
                     {
                         if (
                             part.Position.X < 0
@@ -42,6 +47,7 @@ O código abaixo é onde o na classe snake ele verifica e chama o Game1 para o g
                             Game1.GameOver = true;
                             break;
                         }
+                    }
 ```
 # Snake #
 A classe Snake possui uma estrutura, BodyPart, que é responsável por inicializar uma nova parte do corpo da cobra numa posição (x,y) e uma direção inicial, por exemplo 0-cima ; 1-direita ; 2-baixo ; 3-esquerda. 
