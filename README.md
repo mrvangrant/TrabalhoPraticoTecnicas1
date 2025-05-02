@@ -26,7 +26,7 @@ O jogo termina quando a cabeça da cobra bate no corpo dela ou na fronteira da g
             _spriteBatch.End();
             GraphicsDevice.SetRenderTarget(null);
             //-----
-O jogo funciona maioritariamente com duas classes sendo estas Snake e Ball Spawner.
+
 ```
 O código abaixo é onde o na classe snake ele verifica e chama o Game1 para o game over acontecer.
 ```
